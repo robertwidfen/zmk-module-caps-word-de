@@ -1,10 +1,30 @@
-# ZMK Module Template
+# ZMK Module Caps Words DE
 
-This repository contains a template for a ZMK module, as it would most frequently be used. 
+This repository contains a modified version of caps words handling also äüö umlauts.
 
 ## Usage
 
-Read through the [ZMK Module Creation](https://zmk.dev/docs/development/module-creation) page for details on how to configure this template.
+To load the module, add the following entries to `remotes` and `projects` in
+`config/west.yml`.
+
+```yaml
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: robertwidfen
+      url-base: https://github.com/robertwidfen/
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.3
+      import: app/west.yml
+    - name: zmk-module-caps-word-de
+      remote: robertwidfen
+    #   revision: v0.3 # set to same as ZMK version above
+  self:
+    path: config
+```
 
 ## More Info
 
