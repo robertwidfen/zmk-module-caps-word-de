@@ -1,0 +1,1 @@
+target_sources_ifdef(CONFIG_ZMK_BEHAVIOR_CAPS_WORD_DE app PRIVATE src/behaviors/behavior_caps_word_de.c)

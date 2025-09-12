@@ -1,0 +1,13 @@
+description: |
+  German caps_word behavior that capitalizes umlauts
+
+compatible: "zmk,behavior-caps-word-de"
+
+include: zero_param.yaml
+
+properties:
+  "#binding-cells":
+    type: int
+    const: 0
+  continue-list:
+    type: array
