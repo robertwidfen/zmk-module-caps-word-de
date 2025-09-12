@@ -6,9 +6,5 @@ build:
   # Kconfig filepath
   kconfig: Kconfig
   settings:
-    # Folder containing a "boards" folder (. = root)
-    board_root: .
     # Folder containing a "dts" folder (. = root)
     dts_root: .
-    # Folder containing a "snippets" folder (. = root)
-    snippet_root:  .
