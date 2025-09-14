@@ -4,7 +4,7 @@ compatible: "zmk,behavior-caps-word-de"
 
 include: zero_param.yaml
 
-binding-cells: 0
+binding-cells: <0>
 
 properties:
   continue-list:
