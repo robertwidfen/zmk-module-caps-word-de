@@ -132,6 +132,11 @@ static bool caps_word_de_is_numeric(uint8_t usage_id) {
 
 static void caps_word_de_enhance_usage(const struct behavior_caps_word_de_config *config,
                                     struct zmk_keycode_state_changed *ev) {
+    if (caps_word_de_is_alpha(ev->keycode)) {
+        LOG_DBG("Enhancing usage 0x%02X with modifiers: 0x%02X", ev->keycode, config->mods);
+        ev->implicit_modifiers |= config->mods;
+        return;
+    }
     if (ev->usage_page != HID_USAGE_KEY || !caps_word_de_is_alpha(ev->keycode)) {
         return;
     }
