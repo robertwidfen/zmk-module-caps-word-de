@@ -7,3 +7,5 @@ include: zero_param.yaml
 properties:
   continue-list:
     type: array
+
+binding-cells: 0
