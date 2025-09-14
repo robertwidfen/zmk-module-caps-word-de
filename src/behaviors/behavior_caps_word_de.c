@@ -116,9 +116,9 @@ static bool caps_word_de_is_alpha(uint8_t usage_id) {
 
     // German umlauts
     switch (usage_id) {
-    case HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON:     // ö/Ö
-    case HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE:    // ä/Ä
-    case HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_BRACE:  // ü/Ü
+    case HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON:          // ö/Ö
+    case HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE:         // ä/Ä
+    case HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE:  // ü/Ü
         return true;
     default:
         return false;
