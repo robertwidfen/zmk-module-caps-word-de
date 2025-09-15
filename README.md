@@ -25,6 +25,23 @@ manifest:
   self:
     path: config
 ```
+## Configuration
+
+In your keymap add `caps_word_de` to behaviors and assign it to a key by `&caps_word_de`.
+
+```yaml
+/ {
+...
+   behaviors {
+...
+        caps_word_de: caps_word_de {
+             compatible = "zmk,behavior-caps-word-de";
+             #binding-cells = <0>;
+             // continue-list = <DE_UNDERSCORE DE_MINUS>;
+        };
+...
+    };
+```
 
 ## More Info
 
