@@ -162,7 +162,7 @@ static int caps_word_de_keycode_state_changed_listener(const zmk_event_t *eh) {
         const struct behavior_caps_word_de_config *config = dev->config;
 
         caps_word_de_enhance_usage(config, ev);
-        ev->implicit_modifiers |= config->mods;
+        ev->implicit_modifiers |= MOD_LSFT;
 
         if (!caps_word_de_is_alpha(ev->keycode) && !caps_word_de_is_numeric(ev->keycode) &&
             !is_mod(ev->usage_page, ev->keycode) &&
